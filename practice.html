@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="Квиз по геометрии для 9 класса с объяснениями после каждого ответа.">
+  <title>Практика · ОГЭ / 09</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="practice">
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="ОГЭ 09 — на главную"><span class="brand-mark">∠</span><span>ОГЭ</span><span>/ 09</span></a>
+      <nav class="topnav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="topics.html">Темы</a>
+        <a href="practice.html" aria-current="page">Практика</a>
+        <a href="journal.html">Журнал</a>
+        <a href="about.html">О курсе</a>
+      </nav>
+      <div class="top-progress"><span class="tiny-dot"></span><span id="headerProgress">0 из 13 тем</span></div>
+    </header>
+  <main id="top" class="page-main">
+    <div class="page-section-head practice-page-head">
+      <div><span class="eyebrow">02 / ТРЕНИРОВКА</span><h1 class="page-title">Практика</h1></div>
+      <p>Выбери тему в каталоге или случайную тренировку по всему курсу.</p>
+    </div>
+    <section class="practice-modes" aria-labelledby="mode-title">
+      <div class="mode-heading"><div><span class="eyebrow">СЛУЧАЙНАЯ ПОДБОРКА · БЕЗ ПОВТОРОВ</span><h2 id="mode-title">Выбери длину тренировки</h2></div><p>Задания перемешиваются по темам, чтобы повторить разные разделы курса.</p></div>
+      <div class="mode-grid">
+        <button class="mode-card" type="button" data-mode="7" aria-pressed="false"><span class="mode-index">01 / БЫСТРО</span><span class="mode-count">07</span><h3>Малая</h3><p>Семь случайных заданий для короткой разминки.</p><span class="mode-action">Начать тренировку ↗</span></button>
+        <button class="mode-card mode-featured" type="button" data-mode="15" aria-pressed="false"><span class="mode-index">02 / ПОВТОРЕНИЕ</span><span class="mode-count">15</span><h3>Средняя</h3><p>Пятнадцать вопросов из разных блоков курса.</p><span class="mode-action">Начать тренировку ↗</span></button>
+        <button class="mode-card" type="button" data-mode="30" aria-pressed="false"><span class="mode-index">03 / МАРШРУТ</span><span class="mode-count">30</span><h3>Большая</h3><p>Тридцать заданий для подробной практики.</p><span class="mode-action">Начать тренировку ↗</span></button>
+      </div>
+    </section>
+      <section class="quiz-section" id="practice" aria-labelledby="practice-title">
+        <aside class="quiz-intro">
+          <div><span class="quiz-kicker">02 / практика</span><h2 id="practice-title">Проверим, что уже складывается?</h2><p>Отвечай в своём темпе. Здесь можно ошибаться: главное — понять, почему.</p></div>
+          <div class="quiz-spark">∠ → △ → ◯ → ∞</div>
+        </aside>
+        <div class="quiz-box" id="quizBox" aria-live="polite"></div>
+      </section>
+    <div class="practice-back"><a href="topics.html">← Вернуться к списку тем</a><span>После каждого ответа будет пояснение</span></div>
+  </main>
+  <footer><a class="footer-mark" href="index.html">ОГЭ / 09</a><span>учись видеть связи · находи решение</span><span>Автор курса · А. М.</span></footer>
+  </div>
+  <div id="toastRoot" aria-live="polite" aria-atomic="true"></div>
+  <script src="assets/course-data.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

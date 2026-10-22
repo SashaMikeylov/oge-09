@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="Отчёты учеников и статистика результатов по темам геометрии.">
+  <title>Журнал класса · ОГЭ / 09</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="journal">
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="ОГЭ 09 — на главную"><span class="brand-mark">∠</span><span>ОГЭ</span><span>/ 09</span></a>
+      <nav class="topnav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="topics.html">Темы</a>
+        <a href="practice.html">Практика</a>
+        <a href="journal.html" aria-current="page">Журнал</a>
+        <a href="about.html">О курсе</a>
+      </nav>
+      <div class="top-progress"><span class="tiny-dot"></span><span id="headerProgress">0 из 13 тем</span></div>
+    </header>
+  <main id="top" class="page-main">
+      <section class="classroom-section" id="journal" aria-labelledby="journal-title">
+        <div class="classroom-head">
+          <div><span class="eyebrow">03 / контроль класса</span><h2 id="journal-title">Журнал результатов</h2></div>
+          <p>Собирай отчёты учеников в одном месте: правильные ответы, ошибки и темы, которые стоит повторить.</p>
+        </div>
+        <div class="classroom-card">
+          <div class="classroom-toolbar">
+            <span class="classroom-count" id="journalCount">Пока нет отчётов</span>
+            <div class="classroom-actions">
+              <label class="file-import">Импортировать отчёты<input id="reportImport" type="file" accept=".json,application/json" multiple aria-label="Выбрать отчёты учеников"></label>
+              <button class="button-secondary" id="exportClassCsv" type="button" disabled>Скачать сводку CSV ↓</button>
+              <button class="button-secondary button-danger" id="clearClassJournal" type="button" disabled>Очистить журнал</button>
+            </div>
+          </div>
+          <div id="journalContent"></div>
+          <p class="journal-footnote">Если ученики проходят квиз на этом устройстве, результаты появятся в журнале автоматически. Если каждый работает со своего устройства, пусть отправит учителю скачанный JSON-отчёт — его можно загрузить сюда. Общего сервера нет, данные остаются в браузере.</p>
+        </div>
+      </section>
+    <div class="teacher-note journal-note">
+      <div class="teacher-icon">i</div>
+      <div><h3>Как собрать результаты учеников</h3><p>Каждый ученик скачивает JSON-отчёт после квиза и отправляет его учителю. Здесь можно импортировать один или несколько файлов. Отчёты сохраняются в браузере учителя.</p></div>
+      <a href="about.html">инструкция ↗</a>
+    </div>
+  </main>
+  <div class="password-backdrop" id="clearJournalDialog" hidden>
+    <section class="password-dialog" role="dialog" aria-modal="true" aria-labelledby="clearJournalTitle" aria-describedby="clearJournalHelp">
+      <span class="eyebrow">ДЕЙСТВИЕ УЧИТЕЛЯ</span>
+      <h2 id="clearJournalTitle">Очистить журнал?</h2>
+      <p id="clearJournalHelp">Введи пароль, чтобы удалить все отчёты на этом устройстве. Прогресс по темам сохранится.</p>
+      <form id="clearJournalForm">
+        <label class="password-label" for="clearJournalPassword">Пароль</label>
+        <input class="password-input" id="clearJournalPassword" type="password" inputmode="numeric" autocomplete="off" maxlength="6" pattern="[0-9]{6}" aria-describedby="clearJournalError" required>
+        <p class="password-error" id="clearJournalError" role="alert" hidden>Пароль неверный. Журнал не изменён.</p>
+        <div class="password-actions"><button class="button-secondary" id="cancelClearJournal" type="button">Отмена</button><button class="button-secondary button-danger" type="submit">Подтвердить очистку</button></div>
+      </form>
+    </section>
+  </div>
+  <footer><a class="footer-mark" href="index.html">ОГЭ / 09</a><span>учись видеть связи · находи решение</span><span>Автор курса · А. М.</span></footer>
+  </div>
+  <div id="toastRoot" aria-live="polite" aria-atomic="true"></div>
+  <script src="assets/course-data.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
